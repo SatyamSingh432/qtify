@@ -4,3 +4,10 @@
     justify-content: center;
     align-items: center;
 }
+
+.hero-text {
+    color: var(--css-white);
+    font-size: 32px;
+    font-weight: 600;
+    margin-right: 20px;
+}

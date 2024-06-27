@@ -3,7 +3,11 @@ import './HeroSection.css';
 const HeroSection = () => {
     return (
         <div className='hero-section'>
-            <img src='hero-image.png' alt='Hero Image for QTify' />
+            <div className='hero-text'>
+                <div>100 Thousand Songs, ad-free</div>
+                <div>Over thousands podcast episodes</div>
+            </div>
+            <img src='vibrating-headphone.png' alt='Headphones' />
         </div>
     );
 };
