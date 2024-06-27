@@ -5,7 +5,7 @@ import { Carousel } from './Carousel';
 import './Section.css';
 
 const Section = ({ name, albums }) => {
-    const [isCollapsed, setIsCollapsed] = useState(false);
+    const [isCollapsed, setIsCollapsed] = useState(true);
     return (
         <div className='section-container'>
             <div className='text-container'>
