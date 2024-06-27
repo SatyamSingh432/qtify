@@ -12,7 +12,7 @@ const Carousel = ({ name, albums }) => {
     return (
         <div className='swiper'>
             <Swiper
-                slidesPerView={10}
+                slidesPerView={7}
                 spaceBetween={10}
                 navigation={{
                     nextEl: `#${name.split(' ').join('')}-right`,
