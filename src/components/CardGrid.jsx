@@ -7,7 +7,11 @@ const CardGrid = ({ albums }) => {
         <div className='grid-container'>
             {albums.map((album) => (
                 <Card
-                    noOfFollows={`${album.follows} Follows`}
+                    noOfFollows={
+                        album.follows !== undefined
+                            ? `${album.follows} Follows`
+                            : `${album.likes} Likes`
+                    }
                     key={album.id}
                     albumImage={album.image}
                     albumName={album.title}

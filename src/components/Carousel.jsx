@@ -24,7 +24,11 @@ const Carousel = ({ name, albums }) => {
                 {albums.map((album) => (
                     <SwiperSlide key={album.id}>
                         <Card
-                            noOfFollows={`${album.follows} Follows`}
+                            noOfFollows={
+                                album.follows !== undefined
+                                    ? `${album.follows} Follows`
+                                    : `${album.likes} Likes`
+                            }
                             key={album.id}
                             albumImage={album.image}
                             albumName={album.title}

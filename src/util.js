@@ -33,4 +33,28 @@ const getNewAlbums = async () => {
     }
 };
 
-export { getTopAlbums, getNewAlbums };
+const getSongs = async () => {
+    try {
+        const songs = await fetchData(
+            'https://qtify-backend-labs.crio.do/songs'
+        );
+        return songs;
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+};
+
+const getGenres = async () => {
+    try {
+        const genres = await fetchData(
+            'https://qtify-backend-labs.crio.do/genres'
+        );
+        return genres.data;
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+};
+
+export { getTopAlbums, getNewAlbums, getSongs, getGenres };
