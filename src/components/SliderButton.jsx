@@ -5,6 +5,7 @@ const SliderButton = ({ name, direction }) => {
         <button
             className={`${direction}-btn slider-btn`}
             id={`${name.split(' ').join('')}-${direction}`}
+            disabled={false}
         >
             <img src={`${direction}-button.png`} alt={`${direction} button`} />
         </button>
