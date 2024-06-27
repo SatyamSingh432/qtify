@@ -2,16 +2,16 @@ import { Card } from './Card';
 
 import './CardGrid.css';
 
-const CardGrid = ({ topAlbums }) => {
+const CardGrid = ({ albums }) => {
     return (
         <div className='grid-container'>
-            {topAlbums.map((topAlbum) => (
+            {albums.map((album) => (
                 <Card
-                    noOfFollows={`${topAlbum.follows} Follows`}
-                    key={topAlbum.id}
-                    albumImage={topAlbum.image}
-                    albumName={topAlbum.title}
-                    numOfSongs={topAlbum.songs?.length}
+                    noOfFollows={`${album.follows} Follows`}
+                    key={album.id}
+                    albumImage={album.image}
+                    albumName={album.title}
+                    numOfSongs={album.songs?.length}
                 />
             ))}
         </div>

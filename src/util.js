@@ -21,4 +21,16 @@ const getTopAlbums = async () => {
     }
 };
 
-export { getTopAlbums };
+const getNewAlbums = async () => {
+    try {
+        const newAlbums = await fetchData(
+            'https://qtify-backend-labs.crio.do/albums/new'
+        );
+        return newAlbums;
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+};
+
+export { getTopAlbums, getNewAlbums };

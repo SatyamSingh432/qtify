@@ -2,7 +2,7 @@ import { CardGrid } from './CardGrid';
 
 import './Section.css';
 
-const Section = ({ name, topAlbums }) => {
+const Section = ({ name, albums }) => {
     return (
         <div className='section-container'>
             <div className='text-container'>
@@ -12,7 +12,7 @@ const Section = ({ name, topAlbums }) => {
                 </button>
             </div>
 
-            <CardGrid topAlbums={topAlbums} />
+            <CardGrid albums={albums} />
         </div>
     );
 };
